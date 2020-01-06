@@ -11,7 +11,7 @@ int cont = 0;
 (void) stack;
 (void) number_line;
 if (!caw->head || !caw->head->next)
-error_check(9);
+errorC(9);
 cont = caw->head->n + caw->head->next->n;
 caw->head->next->n = cont;
 popS(NULL, 0);
