@@ -11,9 +11,9 @@ int res = 0;
 (void) stack;
 (void) number_line;
 if (!caw->head || !caw->head->next)
-error_check(11);
+errorC(11);
 if (caw->head->n == 0)
-error_check(12);
+errorC(12);
 res = caw->head->next->n / caw->head->n;
 caw->head->next->n = res;
 popS(NULL, 0);
