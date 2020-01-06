@@ -72,6 +72,7 @@ instruction_t command[] = {
 {"swap", swapS},
 {"add", addS},
 {"nop", nopS},
+{"sub", _sub},
 {NULL, NULL}
 };
 
@@ -114,6 +115,8 @@ if (errorN == 8)
 dprintf(STDERR_FILENO, "L%d: can't swap, stack too short\n", caw->number_line);
 if (errorN == 9)
 dprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", caw->number_line);
+if (errorN == 10)
+dprintf(STDERR_FILENO, "L%d: can't sub, stack too short\n", caw->number_line);
 fLine();
 fNodes(caw->head);
 fToken();
