@@ -92,15 +92,15 @@ errorC(5);
 void errorC(unsigned int errorN)
 {
 if (errorN == 1)
-printf("USAGE: monty file\n");
+dprintf(STDERR_FILENO, "USAGE: monty file\n");
 if (errorN == 2)
-printf("Error: Can't open file %s\n", caw->name_file);
+dprintf(STDERR_FILENO, "Error: Can't open file %s\n", caw->name_file);
 if (errorN == 3)
-printf("Error: malloc failed\n");
+dprintf(STDERR_FILENO, "Error: malloc failed\n");
 if (errorN == 4)
-printf("L%d: usage: push integer\n", caw->number_line);
+dprintf(STDERR_FILENO, "L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)
-printf("L%d: unknown instruction %s\n", caw->number_line, caw->opcode[0]);
+dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line, caw->opcode[0]);
 fLine();
 fNodes(caw->head);
 fToken();
