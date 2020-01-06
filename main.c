@@ -45,13 +45,13 @@ int i = 0;
 char *token = NULL;
 caw->opcode[0] = NULL;
 caw->opcode[1] = NULL;
-token = strtok(line, " '\n'");
+token = strtok(line, "\t\n ");
 for (i = 0; token != NULL && i < 2; i++)
 {
 caw->opcode[i] = strdup(token);
 if (caw->opcode[i] == NULL)
 errorC(3);
-token = strtok(NULL, " '\n'");
+token = strtok(NULL, "\t\n ");
 }
 }
 
