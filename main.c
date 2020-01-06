@@ -75,7 +75,7 @@ instruction_t command[] = {
 {"sub", subS},
 {"div", divS},
 {"mul", mulS},
-{"mod",modS},
+{"mod", modS},
 {NULL, NULL}
 };
 
@@ -109,7 +109,7 @@ dprintf(STDERR_FILENO, "Error: malloc failed\n");
 if (errorN == 4)
 dprintf(STDERR_FILENO, "L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)
-dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line, caw->opcode[0]);
+dprintf(STDERR_FILENO, UNK, caw->number_line, caw->opcode[0]);
 if (errorN == 6)
 dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", caw->number_line);
 if (errorN == 7)
