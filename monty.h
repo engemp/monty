@@ -73,5 +73,5 @@ void errorC(unsigned int errorN);
 void pintS(stack_t **stack, unsigned int number_line);
 void popS(stack_t **stack, unsigned int number_line);
 void swapS(stack_t **stack, unsigned int number_line);
-
+void addS(stack_t **stack, unsigned int number_line);
 #endif /* _MONTY_H_ */
