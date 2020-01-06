@@ -68,6 +68,7 @@ instruction_t command[] = {
 {"push", pushOp},
 {"pall", pallOp},
 {"pint", pintS},
+{"pop", popS},
 {NULL, NULL}
 };
 
@@ -102,8 +103,10 @@ if (errorN == 4)
 dprintf(STDERR_FILENO, "L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)
 dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line, caw->opcode[0]);
-if (errorN == 5)
+if (errorN == 6)
 dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", caw->number_line);
+if (errorN == 7)
+dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", caw->number_line);
 fLine();
 fNodes(caw->head);
 fToken();
