@@ -84,7 +84,12 @@ if (command[i].opcode == NULL)
 error(5);
 }
 
-void error(unsigned int errorN)
+/**
+ * errorC - shows the error according to the failure
+ * @errorN: number asociated to the error
+ * Returns: void and EXIT_FAILURE
+ */
+void errorC(unsigned int errorN)
 {
 if (errorN == 1)
 printf("USAGE: monty file\n");
