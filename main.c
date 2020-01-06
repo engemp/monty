@@ -71,6 +71,7 @@ instruction_t command[] = {
 {"pop", popS},
 {"swap", swapS},
 {"add", addS},
+{"nop", nopS},
 {NULL, NULL}
 };
 
