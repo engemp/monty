@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * addS - adds the top two elements of the stack
  * @stack: double pointer
@@ -10,7 +9,7 @@ void addS(stack_t **stack, unsigned int number_line)
 {
 int cont = 0;
 (void) stack;
-(void) line_number;
+(void) number_line;
 if (!caw->head || !caw->head->next)
 error_check(9);
 cont = caw->head->n + caw->head->next->n;
