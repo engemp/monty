@@ -60,6 +60,7 @@ FILE *fptr;
 } caw_t;
 
 extern caw_t *caw;
+
 void tokenizer(char *line);
 void command(void);
 void fNodes(stack_t *head);

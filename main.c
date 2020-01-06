@@ -12,7 +12,6 @@ caw_t tmp = {NULL, 0, NULL, NULL, NULL, NULL};
 size_t size = 0;
 caw = &tmp;
 caw->name_file = argv[1];
-errorC(5);
 if (argc != 2)
 errorC(1);
 caw->fptr = fopen(caw->name_file, "r");
