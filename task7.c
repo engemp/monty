@@ -9,7 +9,7 @@ void divS(stack_t **stack, unsigned int number_line)
 {
 int res = 0;
 (void) stack;
-(void) line_number;
+(void) number_line;
 if (!caw->head || !caw->head->next)
 error_check(11);
 if (caw->head->n == 0)
