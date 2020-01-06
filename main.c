@@ -102,8 +102,8 @@ if (errorN == 4)
 dprintf(STDERR_FILENO, "L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)
 {
-dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line,
-caw->opcode[0]);
+char *msg = "unknown instruction";
+fprintf(stderr, "L%d: %s %s\n", caw->number_line, msg, caw->opcode[0]);
 }
 fLine();
 fNodes(caw->head);

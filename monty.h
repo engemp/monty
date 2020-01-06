@@ -60,7 +60,6 @@ FILE *fptr;
 } caw_t;
 
 extern caw_t *caw;
-#define UNK "unknown instruction";
 void tokenizer(char *line);
 void command(void);
 void fNodes(stack_t *head);
