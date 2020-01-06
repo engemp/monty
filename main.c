@@ -12,6 +12,7 @@ caw_t tmp = {NULL, 0, NULL, NULL, NULL, NULL};
 size_t size = 0;
 caw = &tmp;
 caw->name_file = argv[1];
+errorC(5);
 if (argc != 2)
 errorC(1);
 caw->fptr = fopen(caw->name_file, "r");
@@ -100,7 +101,10 @@ dprintf(STDERR_FILENO, "Error: malloc failed\n");
 if (errorN == 4)
 dprintf(STDERR_FILENO, "L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)
-dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line, caw->opcode[0]);
+{
+dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", caw->number_line,
+caw->opcode[0]);
+}
 fLine();
 fNodes(caw->head);
 fToken();
