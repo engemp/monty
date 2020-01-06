@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * modS -  computes the rest of div between the 2 and 1 items
  * @stack: double pointer
