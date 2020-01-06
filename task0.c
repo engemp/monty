@@ -18,7 +18,7 @@ compare = caw->opcode[1];
 (void) number_line;
 node = addNode();
 if (node == NULL)
-error(3);
+errorC(3);
 if (compare != NULL)
 {
 if (compare[0] == '-')
@@ -47,7 +47,7 @@ node->n *= -1;
 return;
 }
 }
-error(4);
+errorC(4);
 }
 
 /**

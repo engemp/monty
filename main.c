@@ -50,7 +50,7 @@ for (i = 0; token != NULL && i < 2; i++)
 {
 caw->opcode[i] = strdup(token);
 if (caw->opcode[i] == NULL)
-error(3);
+errorC(3);
 token = strtok(NULL, " '\n'");
 }
 }
@@ -81,7 +81,7 @@ break;
 }
 }
 if (command[i].opcode == NULL)
-error(5);
+errorC(5);
 }
 
 /**
