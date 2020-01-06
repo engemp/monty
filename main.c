@@ -75,6 +75,7 @@ instruction_t command[] = {
 {"sub", subS},
 {"div", divS},
 {"mul", mulS},
+{"mod",modS},
 {NULL, NULL}
 };
 
@@ -125,6 +126,10 @@ if (errorN == 12)
 dprintf(STDERR_FILENO, "L%d: division by zero\n", caw->number_line);
 if (errorN == 13)
 dprintf(STDERR_FILENO, "L%d: can't mul, stack too short\n", caw->number_line);
+if (errorN == 14)
+dprintf(STDERR_FILENO, "L%d: can't mod, stack too short\n", caw->number_line);
+if (errorN == 15)
+dprintf(STDERR_FILENO, "L%d: division by zero\n", caw->number_line);
 fLine();
 fNodes(caw->head);
 fToken();
