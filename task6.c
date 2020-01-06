@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * subS - subtracts the first two items of the stack.
  * @stack: double pointer
