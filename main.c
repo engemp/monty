@@ -73,6 +73,7 @@ instruction_t command[] = {
 {"add", addS},
 {"nop", nopS},
 {"sub", subS},
+{"div", divS},
 {NULL, NULL}
 };
 
@@ -117,6 +118,10 @@ if (errorN == 9)
 dprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", caw->number_line);
 if (errorN == 10)
 dprintf(STDERR_FILENO, "L%d: can't sub, stack too short\n", caw->number_line);
+if (errorN == 11)
+dprintf(STDERR_FILENO, "L%d: can't div, stack too short\n", caw->number_line);
+if (errorN == 12)
+dprintf(STDERR_FILENO, "L%d: division by zero\n", caw->number_line);
 fLine();
 fNodes(caw->head);
 fToken();
