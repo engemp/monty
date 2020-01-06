@@ -70,6 +70,7 @@ instruction_t command[] = {
 {"pint", pintS},
 {"pop", popS},
 {"swap", swapS},
+{"add", addS},
 {NULL, NULL}
 };
 
@@ -110,6 +111,8 @@ if (errorN == 7)
 dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", caw->number_line);
 if (errorN == 8)
 dprintf(STDERR_FILENO, "L%d: can't swap, stack too short\n", caw->number_line);
+if (errorN == 9)
+dprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", caw->number_line);
 fLine();
 fNodes(caw->head);
 fToken();
