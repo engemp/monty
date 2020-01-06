@@ -18,7 +18,7 @@ compare = caw->opcode[1];
 (void) number_line;
 node = addNode();
 if (node == NULL)
-printf("Error: malloc failed");
+error(3);
 if (compare != NULL)
 {
 if (compare[0] == '-')
@@ -47,7 +47,7 @@ node->n *= -1;
 return;
 }
 }
-printf("L%d: usage: push integer\n", caw->number_line);
+error(4);
 }
 
 /**

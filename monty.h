@@ -66,5 +66,5 @@ void fToken(void);
 void pushOp(stack_t **stack, unsigned int number_line);
 void pallOp(stack_t **stack, unsigned int number_line);
 stack_t *addNode(void);
-
+void error(unsigned int errorN);
 #endif /* _MONTY_H_ */
