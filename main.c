@@ -13,16 +13,16 @@ size_t size = 0;
 caw = &tmp;
 caw->name_file = argv[1];
 if (argc != 2)
-error(1);
+errorC(1);
 caw->fptr = fopen(caw->name_file, "r");
-if (caw->fptr == NULL)
-error(2);
+if (!caw->fptr)
+errorC(2);
 while (getline(&caw->line, &size, caw->fptr) != -1)
 {
 caw->number_line++;
 caw->opcode = malloc(sizeof(char *) * 2);
 if (caw->opcode == NULL)
-error(3);
+errorC(3);
 tokenizer(caw->line);
 command();
 fToken();
@@ -70,7 +70,7 @@ instruction_t command[] = {
 {NULL, NULL}
 };
 
-if (caw->opcode[0] == NULL)
+if (!caw->opcode[0])
 return;
 for (i = 0; command[i].opcode; i++)
 {
@@ -96,7 +96,7 @@ printf("USAGE: monty file\n");
 if (errorN == 2)
 printf("Error: Can't open file %s\n", caw->name_file);
 if (errorN == 3)
-printf("Error: malloc failed");
+printf("Error: malloc failed\n");
 if (errorN == 4)
 printf("L%d: usage: push integer\n", caw->number_line);
 if (errorN == 5)

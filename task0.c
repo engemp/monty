@@ -24,8 +24,8 @@ if (compare != NULL)
 if (compare[0] == '-')
 {
 i++;
-flagn = 1;
 flagp = 1;
+flagn = 1;
 }
 while (compare[i])
 {
